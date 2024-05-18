@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The Window Object</h1>
+<h2>Accepting input from user</h2>
+
+<p>Enter first value</p>
+<input type="number" id="value1">
+<br>
+
+<p>Enter second value</p>
+<input type="number" id="value2">
+<br>
+
+<p>Enter 1 for adding the values
+    <br> Enter 2 for subtracting the values<br>
+    Enter 3 for mutiplying the value<br>
+    Enter 4 for division <br>
+    Enter 5 for exponential
+</p>
+<input type="text" id="choice">
+<br><br>
+<button onclick="myFunction()">Output</button>
+
+
+<script>
+function myFunction() 
+{
+    let x=parseInt(document.getElementById("value1").value);
+    let y=parseInt(document.getElementById("value2").value);
+  let ch = parseInt(document.getElementById("choice").value);
+  alert(x+y);
+  alert(x-y);
+  alert(x*y);
+  alert(x/y);
+  alert(x^y);
+  switch(ch)
+  {
+    case 1: document.write(x+y);
+    break;
+    case 2: document.write(x-y);
+    break;
+    case 3: document.write(x*y);
+    break;
+    case 4: document.write(x/y);
+    break;
+    case 5: document.write(x^y);
+    break;
+    default : document.write("invalid input ");
+    break;
+  }
+
+}
+
+
+</script>
+
+</body>
+</html>

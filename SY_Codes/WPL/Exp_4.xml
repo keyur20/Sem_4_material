@@ -1,0 +1,28 @@
+<?xml version = "1.0"?>  
+<?xml-stylesheet type = "text/xsl" href = "people.xsl"?>   
+<class>   
+   <employee id = "001">  
+      <firstname>Tirth</firstname>   
+      <lastname>Patel</lastname>   
+      <nickname>Titu</nickname>   
+      <salary>3000</salary>  
+   </employee>   
+   <employee id = "024">   
+      <firstname>Krishiv</firstname>   
+      <lastname>Nagpal</lastname>   
+      <nickname>kp</nickname>   
+      <salary>25000</salary>  
+   </employee>   
+   <employee id = "056">   
+      <firstname>kushal</firstname>   
+      <lastname>panchal</lastname>   
+      <nickname>kushal</nickname>   
+      <salary>10000</salary>   
+   </employee>  
+   <employee id = "098">   
+    <firstname>Roshan</firstname>   
+    <lastname>Singh</lastname>   
+    <nickname>Sodhi</nickname>   
+    <salary>100000</salary>   
+ </employee>   
+</class>

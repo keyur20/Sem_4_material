@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact_Us</title>
+    <link rel="icon" type="image/x-icon" href="healthcare_logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Contact_Us.css">
+    <style>
+		body 
+        {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+            background-color: #eefdee;
+		}
+
+		header, nav, main, footer {
+			padding: 10px;
+		}
+
+		header 
+        {
+			background-color: #009d00;
+			color: #fff;
+			text-align: center;
+		}
+
+		main {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: flex-start;
+			background-color: #f2f2f2;
+		}
+
+		section {
+			flex-basis: 30%;
+			margin: 20px;
+			padding: 20px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+		}
+
+		section h2 
+        {
+			margin-top: 0;
+		}
+
+		
+
+		footer 
+        {
+			background-color: #333;
+			color: #fff;
+			text-align: center;
+		}
+
+		@media screen and (max-width: 768px) {
+			main {
+				flex-direction: column;
+				align-items: center;
+			}
+
+			section {
+				flex-basis: 80%;
+			}
+		}
+	</style>
+</head>
+<body>
+    <header>
+		<div class="site-logo">
+			<img src="healthcare_logo.png" alt="logo" height="70px" width="50px" style="padding-bottom: 20px; border-radius: 30px;">
+		</div>
+		<p ><h1 style="margin: auto;">Medcare Solutions </h1></p>
+		
+	</header>
+
+	<nav>
+        <br><br>
+		
+	</nav>
+    <!DOCTYPE html>
+<html>
+<head>
+    
+	<title>Contact Us</title>
+	
+</head>
+<body>
+    <br>
+	<h1 style="text-align: center;">Contact Us</h1>
+    <br>
+    <div class="box">
+        <form id="contact-form" action="#" method="post">
+            <label for="name"><h4>Full Name</h4></label>
+            <input type="text" id="name" name="name" placeholder="Your name.." required>
+            <label for="email"><h4>Email</h4></label>
+            <input type="text" id="email" name="email" placeholder="Your email.." required>
+            <label for="phone"><h4>phone number</h4> </label>
+            <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+            <label for="psw"><h4>Password</h4> </label>
+            <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+            
+            <label for="json-input">Enter JSON:</label>
+            <textarea id="json-input" name="json-input"></textarea>
+            <button type="submit">Convert to String</button>
+            
+            <br>
+            <input type="submit" value="Submit">
+
+           
+            
+            <div id="form-errors">
+                <p class="error" id="name-error">Please enter your name</p>
+                <p class="error" id="email-error">Please enter a valid email address</p>
+                <p class="error" id="message-error">Please enter a message</p>
+            </div>
+            
+        </form>
+        <div id="json-string"></div>
+    </div>
+	
+	<script>
+		// form validation
+		const form = document.querySelector('#contact-form');
+		const name = document.querySelector('#name');
+		const email = document.querySelector('#email');
+		const message = document.querySelector('#message');
+		const nameError = document.querySelector('#name-error');
+		const emailError = document.querySelector('#email-error');
+		const messageError = document.querySelector('#message-error');
+
+		form.addEventListener('submit', function(event) {
+			event.preventDefault();
+
+			if (name.value === '') {
+				nameError.style.display = 'block';
+			} else {
+				nameError.style.display = 'none';
+			}
+
+			if (email.value === '@gmail.com' || !isValidEmail(email.value)) 
+            {
+				emailError.style.display = 'block';
+			} 
+            else 
+            {
+				emailError.style.display = 'none';
+			}
+
+			if (message.value === '') {
+				messageError.style.display = 'block';
+			} else {
+				messageError.style.display = 'none';
+			}
+
+			if (name.value !== '' && email.value !== '' && isValidEmail(email.value) && message.value !== '') 
+            {
+				// submit form
+				form.submit();
+			}
+		});
+
+		function isValidEmail(email) 
+        {
+			return /\S+@\S+\.\S+/.test(email);
+		}
+        function verifyPassword() 
+        {  
+            var pw = document.getElementById("pswd").value;  
+            //check empty password field  
+            if(pw == "") 
+            {  
+                document.getElementById("message").innerHTML = "**Fill the password please!";  
+                return false; 
+            } 
+        }
+        
+        //minimum password length validation  
+        if(pw.length < 8) 
+        {  
+            document.getElementById("message").innerHTML = "**Password length must be atleast 8 characters";  
+            return false;  
+        } 
+        //maximum length of password validation  
+        if(pw.length > 15) 
+        {  
+                document.getElementById("message").innerHTML = "**Password length must not exceed 15 characters";  
+            return false;  
+        } 
+        else 
+        {  
+            alert("Password is correct");  
+        } 
+        const form_1 = document.querySelector('form');
+        const jsonInput = document.querySelector('#json-input');
+        const jsonString = document.querySelector('#json-string');
+
+        form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const json = JSON.parse(jsonInput.value);
+        const jsonStringified = JSON.stringify(json, null, 2);
+
+        jsonString.textContent = jsonStringified;
+        });
+ 
+	</script>
+</body>
+</html>
+
+
+
+    <br><br><br>
+
+
+    <footer>
+		<p style="text-align: center;"><h1>Investors</h1></p>
+		<br>
+		<p>Medcare limited is a highly promising company that offers exciting investment opportunities for potential investors.<br>
+			With a strong track record of success and a clear vision for the future, Medcare limited is well positioned to become a leader in its industry.</p>
+		<br>
+		<p>As an investor, you will have the opportunity to be part of a dynamic  <br> and growing company that is committed to delivering value to its customers and shareholders.</p> 
+		<br><br>
+	</footer>
+    
+    
+</body>
+</html>

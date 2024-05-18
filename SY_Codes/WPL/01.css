@@ -1,0 +1,91 @@
+
+.formbody
+{
+    width: 400px;
+    background: -webkit-linear-gradient(to right, #333a42, #99153a); 
+    background: linear-gradient(to left, #994a15, #929915); 
+    color:rgb(222, 255, 4);
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    border-color: black;
+    border-radius: 20px;
+    border: solid black 8px;
+    text-align:center;
+    
+
+    
+}
+.centerbody
+{
+    padding-left: 550px;
+}
+.inputbox
+{
+    background-color: antiquewhite;
+    border: solid rgb(0, 0, 0) 4px;
+    border-radius: 10px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    width: 200px;
+    height: 20px;
+    text-align: center;
+    
+}
+.inputbox1
+{
+    background-color: antiquewhite;
+    border: solid rgb(0, 0, 0) 4px;
+    border-radius: 10px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    width: 200px;
+    height: 40px;
+    
+    
+}
+
+.h4
+{
+    text-align: center;
+    font-size: larger;
+    text-decoration: solid;
+    text-transform: inherit;
+    color: #eff4b3;
+    
+}
+.button1
+{
+    background-color: blueviolet;
+    cursor: pointer;
+    text-align: center;
+    transition-duration: 0.3s;
+    width: 150px;
+    border-radius: 10px;
+    height: 40px;
+    color: whitesmoke;
+    border: solid black 4px;
+
+}
+.button1:hover
+{
+    background-color: #000000;
+    color: aliceblue;
+
+}
+
+@media only screen and (min-width: 768px) {
+    /* For tablets: */
+    .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+}
+
+    
+

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <link rel="stylesheet" href="01.css">
+</head>
+<body style="background-color: bisque;">
+    <h1 style="text-align:center">Javascript Validation</h1>
+    <hr><hr>
+    <div>
+        <form name = 'registration' onclick="return validate_form();" action="action.php" method="post" target="_blank" class="formbody">
+            <label for="name" class="h4"><h4> Full Name: </h4></label><br>
+            <input type="text" name="name" id="name" class="inputbox">
+            <label for="Email" class="h4"><h4>Email: </h4></label><br>
+            <input type="email" name="Email" id="Email" class="inputbox">
+            
+            <label class="h4"><h4> Phone No: </h4></label><br>
+            <input type="tel" name="Mobile" id="Mobile" class="inputbox"><br>
+            
+            <label for="name" class="h4"><h4>Username </h4></label><br>
+            <input type="text" name="name" id="name"class="inputbox">
+            
+            <label for="pswd" class="h4"><h4> Password: </h4></label><br>
+            <input type="password" name="pswd" id="pswd" class="inputbox" placeholder="password">
+
+            <label for="DOB" class="h4"><h4>Date of Birth: </h4></label><br>
+            <input type="date" name="DOB" id="DOB" class="inputbox">
+
+            <label for="country" id="country" class="h4" ><h4>Country:</h4> </label><br>
+            <select name="country" id="country" class="inputbox1">
+                <option value="st" style="text-align: center;">Select Region</option>
+                <option value="bhatwadi">Bhatwadi</option>
+                <option value="mulund">Mulund</option>
+                <option value="kanjur marg">Kanjur marg</option>
+                <option value="bhandup">Bhandup</option>
+            </select>
+            <br>
+            <br>
+            <br>
+
+            <input type="submit" value="submit" name="submit" class="button1">
+
+
+            
+
+        </form>
+
+    </div>
+
+    <script src="validation.js"></script>
+    
+</body>
+</html>

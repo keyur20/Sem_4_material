@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JSON Object to String Example</title>
+</head>
+<body>
+  <form>
+    <label for="json-input">Enter JSON:</label>
+    <textarea id="json-input" name="json-input"></textarea>
+    <button type="submit">Convert to String</button>
+  </form>
+
+  <div id="json-string"></div>
+
+  <script>
+        const form = document.querySelector('form');
+        const jsonInput = document.querySelector('#json-input');
+        const jsonString = document.querySelector('#json-string');
+    
+        form.addEventListener('submit', (e) => 
+        {
+        e.preventDefault();
+    
+        const json = JSON.parse(jsonInput.value);
+        const jsonStringified = JSON.stringify(json, null, 2);
+    
+        jsonString.textContent = jsonStringified;
+        });
+    </script>
+</body>
+</html>
+
+
